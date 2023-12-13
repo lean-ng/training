@@ -1,5 +1,9 @@
 {
   "name": "training",
   "version": "0.0.0",
-  "description": "Angular training materials"
+  "description": "Angular training materials",
+  "dependencies": {},
+  "devDependencies": {
+    "prettier": "^3.1.1"
+  }
 }
