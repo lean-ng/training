@@ -6,3 +6,4 @@
 # Task 1: Create a runnable Web App
 
 - Add this readme-file
+- Add editorconfig
