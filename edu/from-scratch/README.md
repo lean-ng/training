@@ -26,3 +26,8 @@ Resolving this error and subsequent errors leads to ...
 - Add index file `src/index.html`
 - Add TypeScript to dev-time dependencies and provide minimal configuration
 - Add browser entry point `src/main.ts`
+
+### Utilize toolchain features
+
+- Copying static assets (including favicon)
+- Add global styles
