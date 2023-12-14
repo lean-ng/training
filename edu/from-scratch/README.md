@@ -45,3 +45,7 @@ Resolving this error and subsequent errors leads to ...
 - Mark component as standalone to create a module-less app
 - Add the still required lib `zone.js` to prod deps and configure as polyfill to load it
 - Bootstrap the app with the root component
+
+### Utilize angular features
+
+- Add scoped styles to components
