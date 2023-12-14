@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
 import { submissions as submissionsSeed } from '../seed';
 
 @Component({
@@ -10,9 +11,10 @@ import { submissions as submissionsSeed } from '../seed';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  submissions = submissionsSeed;
+  submissions = [...submissionsSeed].sort((a, b) => b.votes - a.votes);
 
   vote(submission: (typeof submissionsSeed)[number]) {
     ++submission.votes;
+    this.submissions = [...this.submissions].sort((a, b) => b.votes - a.votes);
   }
 }
