@@ -20,6 +20,9 @@ importers:
       '@angular/core':
         specifier: ^17.0.7
         version: 17.0.7(rxjs@7.8.1)(zone.js@0.14.2)
+      '@angular/platform-browser':
+        specifier: ^17.0.7
+        version: 17.0.7(@angular/animations@17.0.7)(@angular/common@17.0.7)(@angular/core@17.0.7)
     devDependencies:
       '@angular-devkit/build-angular':
         specifier: ^17.0.7

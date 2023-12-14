@@ -5,7 +5,8 @@
     "dev": "ng serve"
   },
   "dependencies": {
-    "@angular/core": "^17.0.7"
+    "@angular/core": "^17.0.7",
+    "@angular/platform-browser": "^17.0.7"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^17.0.7",
