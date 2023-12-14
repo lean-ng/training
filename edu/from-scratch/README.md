@@ -7,3 +7,4 @@
 
 - Add this readme-file
 - Add editorconfig
+- Initialize node package
