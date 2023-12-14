@@ -14,3 +14,9 @@
 ### Install the angular toolchain
 
 - Add Angular CLI as build system to dev-time dependency
+
+First run of `ng serve` errors with
+
+    Error: This command is not available when running the Angular CLI outside a workspace.
+
+- Add Angular workspace configuration file
