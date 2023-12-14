@@ -49,3 +49,4 @@ Resolving this error and subsequent errors leads to ...
 ### Utilize angular features
 
 - Add scoped styles to components
+- Externalize template and styles
