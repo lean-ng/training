@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0](https://github.com/lean-ng/training/compare/upvote@0.1.0...upvote@1.0.0) (2023-12-14)
+
+### Features
+
+- Handle sorting. ([895da37](https://github.com/lean-ng/training/commit/895da37f32388332c5ac635b6d88e3c4c2304eb0))
+- Handle vote up. ([fda4220](https://github.com/lean-ng/training/commit/fda4220f12c7bcb3bc03aa56ba21792af40470f1))
+- Import seed and iterate over submissions. ([c5b0bf0](https://github.com/lean-ng/training/commit/c5b0bf0877100b00a8a123eb9b378702664421d0))
+
 # 0.1.0 (2023-12-14)
 
 ### Features
