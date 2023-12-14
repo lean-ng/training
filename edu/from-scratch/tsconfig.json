@@ -3,6 +3,11 @@
     // Compilation target (includes lib-setting) - you are free to update to next versions
     "target": "ES2022",
     // ... but downgrade class fields from the ES2022 spec (TS used different runtime behaviour)
-    "useDefineForClassFields": false
+    "useDefineForClassFields": false,
+    // Opt-in for the experimental decorators that Angular uses (which predates the TC39 decorators)
+    "experimentalDecorators": true,
+    // Module system to use (imports/exports) - Way to aggressive probably, but works for now
+    "module": "ESNext",
+    "moduleResolution": "Bundler"
   }
 }

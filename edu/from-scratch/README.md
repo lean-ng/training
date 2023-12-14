@@ -31,3 +31,10 @@ Resolving this error and subsequent errors leads to ...
 
 - Copying static assets (including favicon)
 - Add global styles
+
+## Task 2: Make the app an Angular app
+
+### Create the root component
+
+- Add Angular core package to prod dependencies
+- Create app component (aka root component) and adjust tsconfig
