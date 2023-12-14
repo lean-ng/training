@@ -11,4 +11,8 @@ import { submissions as submissionsSeed } from '../seed';
 })
 export class AppComponent {
   submissions = submissionsSeed;
+
+  vote(submission: (typeof submissionsSeed)[number]) {
+    ++submission.votes;
+  }
 }
