@@ -44,3 +44,4 @@ Resolving this error and subsequent errors leads to ...
 - Add Angular platform (browser of course) to prod deps
 - Mark component as standalone to create a module-less app
 - Add the still required lib `zone.js` to prod deps and configure as polyfill to load it
+- Bootstrap the app with the root component
