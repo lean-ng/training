@@ -17,9 +17,15 @@ importers:
 
   edu/from-scratch:
     devDependencies:
+      '@angular-devkit/build-angular':
+        specifier: ^17.0.7
+        version: 17.0.7(@angular/compiler-cli@17.0.7)(karma@6.4.2)(typescript@5.2.2)
       '@angular/cli':
         specifier: ^17.0.7
         version: 17.0.7
+      typescript:
+        specifier: ~5.2.0
+        version: 5.2.2
 
   samples/upvote:
     dependencies:
@@ -470,7 +476,7 @@ packages:
     dependencies:
       '@ampproject/remapping': 2.2.1
       '@babel/code-frame': 7.23.5
-      '@babel/generator': 7.23.0
+      '@babel/generator': 7.23.6
       '@babel/helper-compilation-targets': 7.23.6
       '@babel/helper-module-transforms': 7.23.3(@babel/core@7.23.2)
       '@babel/helpers': 7.23.6
@@ -5508,7 +5514,7 @@ packages:
       depd: 1.1.2
       inherits: 2.0.3
       setprototypeof: 1.1.0
-      statuses: 1.4.0
+      statuses: 1.5.0
     dev: true
 
   /http-errors@2.0.0:

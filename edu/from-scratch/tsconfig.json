@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    // Compilation target (includes lib-setting) - you are free to update to next versions
+    "target": "ES2022",
+    // ... but downgrade class fields from the ES2022 spec (TS used different runtime behaviour)
+    "useDefineForClassFields": false
+  }
+}
