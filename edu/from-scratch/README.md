@@ -38,5 +38,9 @@ Resolving this error and subsequent errors leads to ...
 
 - Add Angular core package to prod dependencies
 - Create app component (aka root component) and adjust tsconfig
+
+### Bootstrap the app
+
 - Add Angular platform (browser of course) to prod deps
 - Mark component as standalone to create a module-less app
+- Add the still required lib `zone.js` to prod deps and configure as polyfill to load it
