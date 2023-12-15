@@ -2,7 +2,8 @@
   "name": "from-scratch",
   "version": "1.0.0-alpha.2",
   "scripts": {
-    "dev": "ng serve"
+    "dev": "ng serve",
+    "build": "ng build"
   },
   "dependencies": {
     "@angular/core": "^17.0.7",
