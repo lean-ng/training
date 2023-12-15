@@ -15,11 +15,39 @@ const themeConfig = {
         label: 'Docs',
       },
       {
+        type: 'dropdown',
+        label: 'Links',
+        position: 'left',
+        items: [
+          {
+            label: 'Angular',
+            to: '/links/angular',
+          },
+          {
+            label: 'HTML, DOM und CSS',
+            to: '/links/html-dom-css',
+          },
+          {
+            label: 'JavaScript',
+            to: '/links/javascript',
+          },
+          {
+            label: 'TypeScript',
+            to: '/links/typescript',
+          },
+        ],
+      },
+      {
         href: 'https://github.com/lean-ng/training',
         label: 'GitHub',
         position: 'right',
       },
     ],
+  },
+  docs: {
+    sidebar: {
+      autoCollapseCategories: false,
+    },
   },
   footer: {
     copyright: `Copyright © 2023 Michael Buchholz`,
