@@ -27,7 +27,9 @@ const themeConfig = {
 };
 
 /** @type {import('@docusaurus/plugin-content-docs').PluginOptions} */
-const docsPluginOptions = {};
+const docsPluginOptions = {
+  editUrl: 'https://github.com/lean-ng/training/tree/main/website',
+};
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
