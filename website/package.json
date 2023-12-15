@@ -2,7 +2,9 @@
   "name": "website",
   "version": "0.0.1",
   "scripts": {
-    "start": "docusaurus start"
+    "dev": "docusaurus start",
+    "build": "docusaurus build",
+    "serve": "docusaurus serve"
   },
   "dependencies": {
     "@docusaurus/core": "^3.0.1",
