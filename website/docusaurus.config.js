@@ -33,7 +33,7 @@ const docsPluginOptions = {};
 const config = {
   title: 'Angular Training',
   baseUrl: '/',
-  url: 'https://ng-training.vercel.com',
+  url: 'https://ng-training.vercel.app',
 
   favicon: '/favicon.ico',
 
