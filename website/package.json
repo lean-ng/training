@@ -6,9 +6,11 @@
   },
   "dependencies": {
     "@docusaurus/core": "^3.0.1",
+    "@docusaurus/plugin-content-docs": "^3.0.1",
     "@docusaurus/plugin-content-pages": "^3.0.1",
     "@docusaurus/theme-classic": "^3.0.1",
     "@docusaurus/theme-common": "^3.0.1",
+    "@mdx-js/react": "^3.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

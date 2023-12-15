@@ -9,6 +9,12 @@ const themeConfig = {
     },
     items: [
       {
+        type: 'doc',
+        position: 'left',
+        docId: 'intro/overview',
+        label: 'Docs',
+      },
+      {
         href: 'https://github.com/lean-ng/training',
         label: 'GitHub',
         position: 'right',
@@ -19,6 +25,9 @@ const themeConfig = {
     copyright: `Copyright © 2023 Michael Buchholz`,
   },
 };
+
+/** @type {import('@docusaurus/plugin-content-docs').PluginOptions} */
+const docsPluginOptions = {};
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -34,7 +43,10 @@ const config = {
   },
 
   themes: ['@docusaurus/theme-classic'],
-  plugins: [['@docusaurus/plugin-content-pages', {}]],
+  plugins: [
+    ['@docusaurus/plugin-content-pages', {}],
+    ['@docusaurus/plugin-content-docs', docsPluginOptions],
+  ],
 
   themeConfig,
 };
