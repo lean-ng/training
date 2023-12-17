@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { StoreService } from '../../services/store.service';
 
 @Component({
   selector: 'todos-actionbar',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
   imports: [CommonModule],
   templateUrl: './todos-actionbar.component.html',
 })
-export class TodosActionbarComponent {}
+export class TodosActionbarComponent {
+  private storeSvc = inject(StoreService);
+  todos = this.storeSvc.todos;
+}
