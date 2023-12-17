@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.3](https://github.com/lean-ng/training/compare/from-scratch@1.0.0-alpha.2...from-scratch@1.0.0-alpha.3) (2023-12-17)
+
+### Features
+
+- Add build script. ([931861b](https://github.com/lean-ng/training/commit/931861bc5d89dd0ecd824758698421083102e8b2))
+
 # [1.0.0-alpha.2](https://github.com/lean-ng/training/compare/from-scratch@1.0.0-alpha.1...from-scratch@1.0.0-alpha.2) (2023-12-14)
 
 ### Bug Fixes
