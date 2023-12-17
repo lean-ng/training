@@ -2,9 +2,8 @@
   "name": "training",
   "version": "0.0.0",
   "description": "Angular training materials",
-  "dependencies": {},
   "devDependencies": {
-    "lerna": "^8.0.0",
+    "lerna": "^8.0.1",
     "prettier": "^3.1.1"
   }
 }
