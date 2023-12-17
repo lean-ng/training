@@ -1,4 +1,5 @@
 packages:
   - 'website'
+  - 'slides'
   - 'edu/*'
   - 'samples/*'
