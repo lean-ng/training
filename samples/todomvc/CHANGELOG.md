@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/lean-ng/training/compare/todomvc@0.4.0...todomvc@0.5.0) (2023-12-17)
+
+### Features
+
+- Hide/Show implemented via control flow. ([b946e96](https://github.com/lean-ng/training/commit/b946e9692154f07cd09d3e82f30a40f5d26d45e2))
+- Hide/Show implemented via directive. ([05ac59d](https://github.com/lean-ng/training/commit/05ac59dafe66cc2bf6f7529bf82ec7246cd7b41b))
+
 # [0.4.0](https://github.com/lean-ng/training/compare/todomvc@0.3.0...todomvc@0.4.0) (2023-12-17)
 
 ### Features

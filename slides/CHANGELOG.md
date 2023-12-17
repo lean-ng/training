@@ -1,0 +1,10 @@
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+# 0.1.0 (2023-12-17)
+
+### Features
+
+- Create empty slides project. ([1d38fd1](https://github.com/lean-ng/training/commit/1d38fd137dc63026384c4636b141d369274c8757))
