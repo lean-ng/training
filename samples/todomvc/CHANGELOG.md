@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/lean-ng/training/compare/todomvc@0.3.0...todomvc@0.4.0) (2023-12-17)
+
+### Features
+
+- Make service mutable. For Simplicity. ([3adc268](https://github.com/lean-ng/training/commit/3adc268e05bab36e90211ab9611c08b1ea8f5ac6))
+
 # [0.3.0](https://github.com/lean-ng/training/compare/todomvc@0.2.0...todomvc@0.3.0) (2023-12-17)
 
 ### Features
