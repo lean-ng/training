@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/lean-ng/training/compare/todomvc@0.1.0...todomvc@0.2.0) (2023-12-17)
+
+### Features
+
+- Declaire domain model. ([28d0252](https://github.com/lean-ng/training/commit/28d025238d7fdc96bd9710d7c74d58f7d8f0ffbe))
+- Divide the app up into simple components with external templates. ([d091ba3](https://github.com/lean-ng/training/commit/d091ba3d34219b1171d68513fa0bcf57e2ad7769))
+
 # 0.1.0 (2023-12-17)
 
 ### Features
