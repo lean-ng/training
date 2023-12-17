@@ -7,5 +7,9 @@
   "dependencies": {
     "@slidev/cli": "0.46.1",
     "@slidev/theme-default": "0.21.2"
+  },
+  "devDependencies": {
+    "@iconify-json/ri": "^1.1.8",
+    "@iconify-json/twemoji": "^1.1.15"
   }
 }
