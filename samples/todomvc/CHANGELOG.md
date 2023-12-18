@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0](https://github.com/lean-ng/training/compare/todomvc@0.9.0...todomvc@1.0.0) (2023-12-18)
+
+### Features
+
+- Formatting and clean up. ([44171ef](https://github.com/lean-ng/training/commit/44171efe1ec672b51ce50547eb44c72d0069fa82))
+
 # [0.9.0](https://github.com/lean-ng/training/compare/todomvc@0.8.0...todomvc@0.9.0) (2023-12-18)
 
 ### Features
