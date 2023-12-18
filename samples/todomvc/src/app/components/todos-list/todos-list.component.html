@@ -1,5 +1,5 @@
 <ul class="todo-list">
   @for (item of todos(); track item.id) {
-    <todos-item [todo]="item" />
+    <todos-item [todo]="item" (toggle)="handleToggle(item)" (destroy)="handleDestroy(item)" />
   }
 </ul>

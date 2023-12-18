@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Todo } from '../../model/todo';
 
 @Component({
@@ -11,4 +11,11 @@ import { Todo } from '../../model/todo';
 export class TodosItemComponent {
   @Input({required: true})
   todo!: Todo;
+
+  @Output()
+  toggle = new EventEmitter();
+
+  @Output()
+  destroy = new EventEmitter();
+
 }

@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { TodosItemComponent } from '../todos-item/todos-item.component';
 import { StoreService } from '../../services/store.service';
+import { Todo } from '../../model/todo';
 
 @Component({
   selector: 'todos-list',
@@ -12,4 +13,12 @@ import { StoreService } from '../../services/store.service';
 export class TodosListComponent {
   private storeSvc = inject(StoreService);
   todos = this.storeSvc.todos;
+
+  handleToggle(todo: Todo) {
+    this.storeSvc.updateTodoCompletedState(todo.id, !todo.completed);
+  }
+
+  handleDestroy(todo: Todo) {
+    this.storeSvc.deleteTodo(todo.id);
+  }
 }
