@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.8.0](https://github.com/lean-ng/training/compare/todomvc@0.7.0...todomvc@0.8.0) (2023-12-18)
+
+### Features
+
+- Handle clear completed button. ([3c496ef](https://github.com/lean-ng/training/commit/3c496efd207dfa7a25b835e96a4713dac611ccda))
+- Handle counting. ([c15d984](https://github.com/lean-ng/training/commit/c15d98452ac45a8057647979a619874fafa509bf))
+- Handle mark/unmark all as completed. ([b71e336](https://github.com/lean-ng/training/commit/b71e33665943c2a69d2b38a9c28dc511eebd5ef2))
+
 # [0.7.0](https://github.com/lean-ng/training/compare/todomvc@0.6.0...todomvc@0.7.0) (2023-12-18)
 
 ### Features
