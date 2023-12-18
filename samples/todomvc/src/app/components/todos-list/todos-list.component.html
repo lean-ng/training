@@ -1,3 +1,5 @@
 <ul class="todo-list">
-  <todos-item />
+  @for (item of todos(); track item.id) {
+    <todos-item [todo]="item" />
+  }
 </ul>

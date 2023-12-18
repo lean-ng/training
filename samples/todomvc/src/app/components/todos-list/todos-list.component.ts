@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { TodosItemComponent } from '../todos-item/todos-item.component';
+import { StoreService } from '../../services/store.service';
 
 @Component({
   selector: 'todos-list',
@@ -8,4 +9,7 @@ import { TodosItemComponent } from '../todos-item/todos-item.component';
   templateUrl: './todos-list.component.html',
   imports: [CommonModule, TodosItemComponent],
 })
-export class TodosListComponent {}
+export class TodosListComponent {
+  private storeSvc = inject(StoreService);
+  todos = this.storeSvc.todos;
+}

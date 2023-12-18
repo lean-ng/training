@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Todo } from '../../model/todo';
 
 @Component({
   selector: 'todos-item',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
   imports: [CommonModule],
   templateUrl: './todos-item.component.html',
 })
-export class TodosItemComponent {}
+export class TodosItemComponent {
+  @Input({required: true})
+  todo!: Todo;
+}
