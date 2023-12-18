@@ -13,4 +13,9 @@ export class TodosActionbarComponent {
   todos = this.storeSvc.todos;
 
   activeCount = computed(() => this.todos().reduce((count, item) => item.completed ? count : count + 1, 0));
+  hasCompleted = computed(() => this.todos().some(t => t.completed));
+
+  handleRemoveCompleted() {
+    this.storeSvc.deleteCompletedTodos();
+  }
 }

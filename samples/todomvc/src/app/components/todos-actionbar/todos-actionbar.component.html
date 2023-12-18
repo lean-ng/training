@@ -13,7 +13,8 @@
         <a href="#/completed">Completed</a>
       </li>
     </ul>
-    <!-- Hidden if no completed items are left ↓ -->
-    <button class="clear-completed">Clear completed</button>
+    @if (hasCompleted()) {
+      <button (click)="handleRemoveCompleted()" class="clear-completed">Clear completed</button>
+    }
   </footer>
 }
