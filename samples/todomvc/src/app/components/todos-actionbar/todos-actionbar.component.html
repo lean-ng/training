@@ -1,9 +1,17 @@
 @if (todos().length) {
   <footer class="footer">
-    <span class="todo-count"><strong>{{ activeCount() }}</strong> {{ activeCount() === 1 ? 'item' : 'items'}} left</span>
+    <span class="todo-count"
+      ><strong>{{ activeCount() }}</strong>
+      {{ activeCount() === 1 ? 'item' : 'items' }} left</span
+    >
     <ul class="filters">
       <li>
-        <a routerLink="/" routerLinkActive="selected" [routerLinkActiveOptions]="{ exact: true}">All</a>
+        <a
+          routerLink="/"
+          routerLinkActive="selected"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >All</a
+        >
       </li>
       <li>
         <a routerLink="/active" routerLinkActive="selected">Active</a>
@@ -13,7 +21,9 @@
       </li>
     </ul>
     @if (hasCompleted()) {
-      <button (click)="handleRemoveCompleted()" class="clear-completed">Clear completed</button>
+      <button (click)="handleRemoveCompleted()" class="clear-completed">
+        Clear completed
+      </button>
     }
   </footer>
 }

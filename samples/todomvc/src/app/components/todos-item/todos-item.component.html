@@ -1,10 +1,22 @@
-<li [ngClass]="{completed: todo.completed, editing: editMode}">
-    <div class="view">
-      <input class="toggle" type="checkbox" [checked]="todo.completed" (change)="toggle.emit()" />
-      <label (dblclick)="beginEdit()">{{ todo.title }}</label>
-      <button class="destroy" (click)="destroy.emit()"></button>
-    </div>
-    <input #editFld [value]="editTitle" (change)="editTitle = editFld.value"
-    (blur)="commitEdit()" (keyup.enter)="commitEdit()" (keyup.esc)="cancelEdit()"
-    class="edit" [autofocus]="true" />
+<li [ngClass]="{ completed: todo.completed, editing: editMode }">
+  <div class="view">
+    <input
+      class="toggle"
+      type="checkbox"
+      [checked]="todo.completed"
+      (change)="toggle.emit()"
+    />
+    <label (dblclick)="beginEdit()">{{ todo.title }}</label>
+    <button class="destroy" (click)="destroy.emit()"></button>
+  </div>
+  <input
+    #editFld
+    [value]="editTitle"
+    (change)="editTitle = editFld.value"
+    (blur)="commitEdit()"
+    (keyup.enter)="commitEdit()"
+    (keyup.esc)="cancelEdit()"
+    class="edit"
+    [autofocus]="true"
+  />
 </li>

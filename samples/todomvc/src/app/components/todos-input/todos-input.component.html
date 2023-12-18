@@ -1,1 +1,9 @@
-<input #fld [value]="title" (change)="title = fld.value.trim()" (keyup.enter)="handleEnter()" class="new-todo" placeholder="What needs to be done?" autofocus />
+<input
+  #fld
+  [value]="title"
+  (change)="title = fld.value.trim()"
+  (keyup.enter)="handleEnter()"
+  class="new-todo"
+  placeholder="What needs to be done?"
+  autofocus
+/>
