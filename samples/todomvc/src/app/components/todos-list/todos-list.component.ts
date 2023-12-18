@@ -21,4 +21,8 @@ export class TodosListComponent {
   handleDestroy(todo: Todo) {
     this.storeSvc.deleteTodo(todo.id);
   }
+
+  handleUpdate(todo: Todo, newTitle: string) {
+    this.storeSvc.updateTodoTitle(todo.id, newTitle);
+  }
 }
