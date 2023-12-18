@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.9.0](https://github.com/lean-ng/training/compare/todomvc@0.8.0...todomvc@0.9.0) (2023-12-18)
+
+### Features
+
+- Handling filtering via filter-service and routing. ([67e0a94](https://github.com/lean-ng/training/commit/67e0a94990b0673bf61ef315836762899ebc6928))
+
 # [0.8.0](https://github.com/lean-ng/training/compare/todomvc@0.7.0...todomvc@0.8.0) (2023-12-18)
 
 ### Features
