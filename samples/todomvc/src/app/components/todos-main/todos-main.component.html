@@ -1,5 +1,7 @@
-<section *ngIf="todos.length > 0" class="main">
+@if (todos().length) {
+<section class="main">
   <input id="toggle-all" class="toggle-all" type="checkbox" />
   <label for="toggle-all">Mark all as complete</label>
   <todos-list />
 </section>
+}
