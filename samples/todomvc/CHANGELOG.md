@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/lean-ng/training/compare/todomvc@0.6.0...todomvc@0.7.0) (2023-12-18)
+
+### Features
+
+- Handle title update and deleting via empty updated title. ([77d6941](https://github.com/lean-ng/training/commit/77d6941964b802c8256722f9456b8f2dffcd0c54))
+- Handle toggle and destroy of todo items. ([01d2bbe](https://github.com/lean-ng/training/commit/01d2bbef7295baa4bbe1bab328e8ef35c829f36c))
+- Render todo items. ([e82b389](https://github.com/lean-ng/training/commit/e82b389e9fc8e456d353c1b98987069eb3a80cd4))
+
 # [0.6.0](https://github.com/lean-ng/training/compare/todomvc@0.5.0...todomvc@0.6.0) (2023-12-18)
 
 ### Features
