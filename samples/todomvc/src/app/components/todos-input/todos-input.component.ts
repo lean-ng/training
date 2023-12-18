@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'todos-input',
@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
   imports: [CommonModule],
   templateUrl: './todos-input.component.html',
 })
-export class TodosInputComponent {}
+export class TodosInputComponent {
+  title = '';
+
+  @Output()
+  create = new EventEmitter<string>();
+
+  handleEnter() {
+    if (this.title.length > 0) {
+      this.create.emit(this.title);
+      this.title = '';
+    }
+  }
+}
