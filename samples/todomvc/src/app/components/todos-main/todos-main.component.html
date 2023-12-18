@@ -1,6 +1,6 @@
 @if (todos().length) {
 <section class="main">
-  <input id="toggle-all" class="toggle-all" type="checkbox" />
+  <input id="toggle-all" class="toggle-all" type="checkbox" [checked]="allDone()" (change)="handleSyncState()" />
   <label for="toggle-all">Mark all as complete</label>
   <todos-list />
 </section>
