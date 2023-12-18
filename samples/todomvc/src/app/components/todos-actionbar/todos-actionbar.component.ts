@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component, computed, inject } from '@angular/core';
 import { StoreService } from '../../services/store.service';
 
 @Component({
@@ -11,4 +11,6 @@ import { StoreService } from '../../services/store.service';
 export class TodosActionbarComponent {
   private storeSvc = inject(StoreService);
   todos = this.storeSvc.todos;
+
+  activeCount = computed(() => this.todos().reduce((count, item) => item.completed ? count : count + 1, 0));
 }
