@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/lean-ng/training/compare/todomvc@0.5.0...todomvc@0.6.0) (2023-12-18)
+
+### Features
+
+- Create todo items. ([b7fbc5d](https://github.com/lean-ng/training/commit/b7fbc5d54c23efc7f01402a3ebaba10c4840567b))
+- Revert service and use best practices, signals and control flow.. ([028dc59](https://github.com/lean-ng/training/commit/028dc59e32a19a3750df667bb1597e1bf470b82e))
+
 # [0.5.0](https://github.com/lean-ng/training/compare/todomvc@0.4.0...todomvc@0.5.0) (2023-12-17)
 
 ### Features
