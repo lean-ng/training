@@ -2,7 +2,8 @@
   "name": "slides",
   "version": "0.1.2",
   "scripts": {
-    "dev": "slidev"
+    "dev": "slidev",
+    "build": "slidev build"
   },
   "dependencies": {
     "@slidev/cli": "0.46.1",
