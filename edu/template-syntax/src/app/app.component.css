@@ -1,0 +1,8 @@
+main {
+  display: flex;
+  gap: 1rem;
+}
+
+section {
+  padding-left: 240px;
+}

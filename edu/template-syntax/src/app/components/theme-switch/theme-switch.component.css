@@ -1,0 +1,19 @@
+:host {
+  display: block;
+}
+
+button {
+  background-color: var(--violet-3);
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 0;
+  color: inherit;
+}
+
+button:hover {
+  background-color: var(--violet-4);
+}
+
+button:active {
+  background-color: var(--violet-5);
+}

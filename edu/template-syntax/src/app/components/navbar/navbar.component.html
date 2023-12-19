@@ -1,0 +1,12 @@
+<nav>
+  @for (group of navItems; track $index) {
+    <div>{{ group.group }}</div>
+    @for (item of group.items; track $index) {
+      <a
+        href="#"
+        (click)="handleNavigation(item.index); $event.preventDefault()"
+        >{{ item.title }}</a
+      >
+    }
+  }
+</nav>
