@@ -14,6 +14,55 @@ importers:
         specifier: ^3.1.1
         version: 3.1.1
 
+  edu/forms-bs:
+    dependencies:
+      '@angular/animations':
+        specifier: ^17.0.0
+        version: 17.0.7(@angular/core@17.0.7)
+      '@angular/common':
+        specifier: ^17.0.0
+        version: 17.0.7(@angular/core@17.0.7)(rxjs@7.8.1)
+      '@angular/compiler':
+        specifier: ^17.0.0
+        version: 17.0.7(@angular/core@17.0.7)
+      '@angular/core':
+        specifier: ^17.0.0
+        version: 17.0.7(rxjs@7.8.1)(zone.js@0.14.2)
+      '@angular/forms':
+        specifier: ^17.0.0
+        version: 17.0.7(@angular/common@17.0.7)(@angular/core@17.0.7)(@angular/platform-browser@17.0.7)(rxjs@7.8.1)
+      '@angular/platform-browser':
+        specifier: ^17.0.0
+        version: 17.0.7(@angular/animations@17.0.7)(@angular/common@17.0.7)(@angular/core@17.0.7)
+      '@angular/platform-browser-dynamic':
+        specifier: ^17.0.0
+        version: 17.0.7(@angular/common@17.0.7)(@angular/compiler@17.0.7)(@angular/core@17.0.7)(@angular/platform-browser@17.0.7)
+      '@angular/router':
+        specifier: ^17.0.0
+        version: 17.0.7(@angular/common@17.0.7)(@angular/core@17.0.7)(@angular/platform-browser@17.0.7)(rxjs@7.8.1)
+      rxjs:
+        specifier: ~7.8.0
+        version: 7.8.1
+      tslib:
+        specifier: ^2.3.0
+        version: 2.6.2
+      zone.js:
+        specifier: ~0.14.2
+        version: 0.14.2
+    devDependencies:
+      '@angular-devkit/build-angular':
+        specifier: ^17.0.7
+        version: 17.0.7(@angular/compiler-cli@17.0.7)(karma@6.4.2)(typescript@5.2.2)
+      '@angular/cli':
+        specifier: ^17.0.7
+        version: 17.0.7
+      '@angular/compiler-cli':
+        specifier: ^17.0.0
+        version: 17.0.7(@angular/compiler@17.0.7)(typescript@5.2.2)
+      typescript:
+        specifier: ~5.2.2
+        version: 5.2.2
+
   edu/from-scratch:
     dependencies:
       '@angular/core':
@@ -19061,7 +19110,7 @@ packages:
       read-package-json-fast: 3.0.2
       sigstore: 2.1.0
       ssri: 10.0.5
-      tar: 6.1.11
+      tar: 6.2.0
     transitivePeerDependencies:
       - bluebird
       - supports-color
