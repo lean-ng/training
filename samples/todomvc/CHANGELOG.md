@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.1](https://github.com/lean-ng/training/compare/todomvc@1.0.0...todomvc@1.0.1) (2023-12-19)
+
+### Bug Fixes
+
+- Add linting and streamline code (previous commit 172ff35fe1c0794e9f35016063073a0354dfe7cf ). ([9c68dd4](https://github.com/lean-ng/training/commit/9c68dd4241755f656e4f10b9f562b6992e61a91a))
+
 # [1.0.0](https://github.com/lean-ng/training/compare/todomvc@0.9.0...todomvc@1.0.0) (2023-12-18)
 
 ### Features
