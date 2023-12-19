@@ -1,19 +1,25 @@
-import { CommonModule } from '@angular/common';
-import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
+import { NgClass } from '@angular/common';
+import {
+  Component,
+  ElementRef,
+  EventEmitter,
+  Input,
+  Output,
+  ViewChild,
+} from '@angular/core';
 import { Todo } from '../../model/todo';
 
 @Component({
   selector: 'todos-item',
   standalone: true,
-  imports: [CommonModule],
+  imports: [NgClass],
   templateUrl: './todos-item.component.html',
 })
 export class TodosItemComponent {
-
   editMode = false;
   editTitle = '';
 
-  @Input({required: true})
+  @Input({ required: true })
   todo!: Todo;
 
   @Output()
@@ -31,7 +37,7 @@ export class TodosItemComponent {
   beginEdit() {
     this.editTitle = this.todo.title;
     this.editMode = true;
-    setTimeout(() => this.editField.nativeElement.focus(), 0)
+    setTimeout(() => this.editField.nativeElement.focus(), 0);
   }
 
   cancelEdit() {

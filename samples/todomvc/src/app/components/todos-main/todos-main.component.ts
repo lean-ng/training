@@ -1,4 +1,3 @@
-import { CommonModule } from '@angular/common';
 import { Component, computed, inject } from '@angular/core';
 import { TodosListComponent } from '../todos-list/todos-list.component';
 import { StoreService } from '../../services/store.service';
@@ -7,15 +6,15 @@ import { StoreService } from '../../services/store.service';
   selector: 'todos-main',
   standalone: true,
   templateUrl: './todos-main.component.html',
-  imports: [CommonModule, TodosListComponent],
+  imports: [TodosListComponent],
 })
 export class TodosMainComponent {
   private storeSvc = inject(StoreService);
-  todos = this.storeSvc.todos;
 
-  allDone = computed(() => !this.todos().some(t => !t.completed));
+  hasTodos = computed(() => this.storeSvc.todos().length > 0);
+  allDone = computed(() => !this.storeSvc.todos().some((t) => !t.completed));
 
   handleSyncState() {
-    this.storeSvc.setAllTodosCompletedState(!this.allDone())
+    this.storeSvc.setAllTodosCompletedState(!this.allDone());
   }
 }

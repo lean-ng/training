@@ -1,4 +1,3 @@
-import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { TodosInputComponent } from '../todos-input/todos-input.component';
 import { TodosMainComponent } from '../todos-main/todos-main.component';
@@ -12,12 +11,7 @@ import { FilterService } from '../../services/filter.service';
   selector: 'todos-shell',
   standalone: true,
   templateUrl: './todos-shell.component.html',
-  imports: [
-    CommonModule,
-    TodosInputComponent,
-    TodosMainComponent,
-    TodosActionbarComponent,
-  ],
+  imports: [TodosInputComponent, TodosMainComponent, TodosActionbarComponent],
 })
 export class TodosShellComponent {
   private storeSvc = inject(StoreService);
@@ -25,10 +19,13 @@ export class TodosShellComponent {
   private route = inject(ActivatedRoute);
 
   constructor() {
-    this.route.paramMap.pipe(map(params => params.get('filter'))).subscribe(filter => {
-      const visibilityFilter =  (filter === 'active' || filter === 'completed') ? filter : 'all';
-      this.filterSvc.setFilter(visibilityFilter);
-    });
+    this.route.paramMap
+      .pipe(map((params) => params.get('filter')))
+      .subscribe((filter) => {
+        const visibilityFilter =
+          filter === 'active' || filter === 'completed' ? filter : 'all';
+        this.filterSvc.setFilter(visibilityFilter);
+      });
   }
 
   handleCreate(title: string) {

@@ -1,4 +1,3 @@
-import { CommonModule } from '@angular/common';
 import { Component, computed, inject } from '@angular/core';
 import { TodosItemComponent } from '../todos-item/todos-item.component';
 import { StoreService } from '../../services/store.service';
@@ -9,7 +8,7 @@ import { FilterService } from '../../services/filter.service';
   selector: 'todos-list',
   standalone: true,
   templateUrl: './todos-list.component.html',
-  imports: [CommonModule, TodosItemComponent],
+  imports: [TodosItemComponent],
 })
 export class TodosListComponent {
   private storeSvc = inject(StoreService);
@@ -17,8 +16,11 @@ export class TodosListComponent {
 
   todos = computed(() => {
     const filter = this.filterSvc.filter();
-    return filter === 'all' ? this.storeSvc.todos() :
-    this.storeSvc.todos().filter(t => t.completed === (filter === 'completed') )
+    return filter === 'all'
+      ? this.storeSvc.todos()
+      : this.storeSvc
+          .todos()
+          .filter((t) => t.completed === (filter === 'completed'));
   });
 
   handleToggle(todo: Todo) {
