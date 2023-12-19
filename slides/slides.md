@@ -186,3 +186,216 @@ Falls sich der Entwicklungsrechner hinter einem Firmen-Proxy befindet, müssen u
   ```
 
 Natürlich muss der Proxy im System selbst eingetragen sein. Diese Einstellungen werden zum Beispiel von Visual Studio Code übernommen.
+
+---
+
+# Hello Angular
+
+- Erzeugen eines ersten Projektes
+- Top-Level Projekt Struktur
+- Source-Ordner Struktur
+- Anwendungs-Struktur
+- Building Blocks: Module und Komponenten
+
+---
+
+# Hello Angular: Projekt erzeugen I
+
+Folgendes Kommando bitte in einem Terminal eingeben. Bei den folgenden Fragen zur Projekt-Konfiguration bitte einfach die Default-Werte mit `Enter` übernehmen.
+
+```bash
+ng new sample-schulung
+```
+
+Obiges Kommando funktioniert natürlich nur mit einer global installierten Angular CLI. Das Projekt wird dann genau gemäß der installierten CLI-Version erstellt.
+
+Etwas flexibler ist man bei der Installation ohne globale CLI:
+
+```bash
+npx -p @angular/cli@latest ng new sample-schulung
+```
+
+Den Ausdruck `latest` kann man durch eine gewünschte ältere Versionsnummer ersetzen (z.B. 16).
+
+---
+
+# Hello Angular: Projekt erzeugen II
+
+Tatsächlich empfehle ich neue Projekte **immer** mit dem längeren und etwas komplizierteren `npx`-Kommando zu erstellen. Das vermeidet *veraltete* Dateien im erstellten Projekt. Ansonsten wäre zwingend vor jeder Projekterstellung zu prüfen, ob die CLI noch in der aktuellsten bzw. gewünschten Version vorliegt.
+
+Bei dem anschließenden Arbeiten im Projekt ist die globale CLI-Version irrelevant, weil im Projekt immer die lokal installierte genutzt wird.
+
+---
+
+# Hello Angular: Projekt erzeugen III
+
+Das `ng new sample-schulung` Kommando
+
+- erzeugt ein neues Verzeichnis `sample-schulung`
+- legt ein Anwendungsgerüst gemäß der gewünschten Angular-Version und den per Schalter angegebenen Optionen an
+- installiert die Angular-Pakete und deren Abhängigkeiten
+
+Das ganze dauert je nach Rechner und Netzwerkgeschwindigkeit einige Sekunden ...
+
+---
+
+# Hello Angular: Top-Level Struktur
+
+```
+├── package.json und package-lock.json
+├── tsconfig*.json
+├── angular.json
+├── node_modules/
+├── src/
+```
+
+- `package.json`: Projekt Metadaten (NPM Module, Script-Kommandos, Autor, Lizenz, ...)
+- `tsconfig*.json`: TypeScript Konfiguration
+- `angular.json`: Angular CLI und Build Konfiguration
+- `node_modules`: Verzeichnis mit den NPM Modulen (zur Zeit >400 MB groß)
+- `src`: Verzeichnis mit dem Anwendungs-Sourcecode.
+
+<style> pre { margin: 1rem 0 ; } </style>
+
+---
+
+# Hello Angular: Source-Ordner Struktur
+
+```
+├── src
+│ ├── index.html
+│ ├── main.ts
+│ ├── styles.css
+│ ├── app/
+│ ├── assets/
+```
+
+- `index.html`: HTML-Startseite der Anwendung
+- `main.ts`: Bootstrap-/Start-Script der Anwendung
+- `styles.css`: Globale Styles
+- `app`: _Unser_ Quellcode-Ordner
+- `assets`: Statische Assets (Bilder, Fonts, ...)
+
+<style> pre { margin: 1rem 0 ; } </style>
+
+---
+
+# Hello Angular: App-Ordner Struktur
+
+```
+├── src
+│   ├── app
+│   │   ├── app.component.css
+│   │   ├── app.component.html
+│   │   ├── app.component.spec.ts
+│   │   ├── app.component.ts
+│   │   ├── app.config.ts
+│   │   ├── app.routes.ts
+```
+
+- `app.config.ts`: Konfiguration der Anwendung (Dienste, Routing, ...)
+- `app.routes.ts`: Router-Konfiguration (Mapping Url auf Komponenten)
+- `app.component.ts`: Bootstrap-/Haupt-Komponente der Anwendung
+- `app.component.html`: HTML-View/Ansicht der Haupt-Komponente
+- `app.component.css`: Styles (lokal, gescoped) der Haupt-Komponente
+- `app.component.spec.ts`: Test Spec der Haupt-Komponente
+
+<style> pre { margin: 1rem 0 ; } </style>
+
+---
+
+# Hello Angular: Bootstrap / Start
+
+```ts
+import { bootstrapApplication } from '@angular/platform-browser';
+
+import { appConfig } from './app/app.config';
+import { AppComponent } from './app/app.component';
+
+bootstrapApplication(AppComponent, appConfig)
+  .catch((err) => console.error(err));
+```
+
+Zum Starten der Anwendung wird die Plattform-spezifische `bootstrapApplication`-Methode importiert
+und mit dieser die Anwenung gestartet. Dazu gehört im ersten Parameter die Haupt- bzw. Wurzelkomponente
+und im zweiten das Konfigurationsobjekt.
+
+---
+clicks: 7
+---
+
+# Hello Angular: Komponenten I
+
+```ts {all|3-9|4|5|6|7,8|10-12|11}
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [CommonModule, RouterOutlet],
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.css'
+})
+export class AppComponent {
+  title = 'sample-schulung';
+}
+```
+<div class="flex text-base">
+<ul>
+  <li v-click="1">Component-Decorator (Metadaten)</li>
+  <ul>
+    <li v-click="2" class="!ml-8 list-disc">Selektor bestimmt, wie die Komponente eingesetzt wird.</li>
+    <li v-click="3" class="!ml-8 list-disc">Standalone-Komponente, kein (legacy) Angular Module nötig.</li>
+    <li v-click="4" class="!ml-8 list-disc">Fremd-Module und Komponenten.</li>
+    <li v-click="5" class="!ml-8 list-disc">Verweis auf externes Template und Stylesheets</li>
+  </ul>
+</ul>
+<ul>
+  <li v-click="6">Component-Class</li>
+  <ul>
+    <li v-click="7" class="!ml-8 list-disc">Instanz-Daten (Property)</li>
+  </ul>
+</ul>
+</div>
+
+---
+
+# Hello Angular: Komponenten II
+
+```ts {all|6|7}
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  template: '<h1>{{title}}</h1>', // inline HTML
+  styles: ['h1 { font-weight: normal; }'], // inline styles
+})
+export class AppComponent {
+  title = 'Hello Angular';
+}
+```
+
+Template und Styles können auch inline definiert werden.
+
+---
+
+# Hello Angular: Zusammenfassung
+
+Komponenten sind die Hauptbausteine einer Angular-Anwendung
+
+<v-clicks>
+
+- Sie kapseln Datendarstellung und (zum Teil) Anwendungslogik
+- Jede Angular Anwendung hat eine Hauptkomponente, die beim Bootstrap der Anwendung ausgewählt wird.
+- Eingesetzt wird diese im globalen `index.html`
+
+</v-clicks>
+
+---
+
+# Hello Angular: Starten der Anwendung
+
+- Start auf der Konsole über `npm start` oder `ng serve`
+- Automatisierte Unit-Tests werden ausgeführt mit `npm test` oder `ng test`
+- Production-Build erzeugen mit `npm run build` oder `ng build`
