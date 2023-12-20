@@ -714,3 +714,100 @@ Um die DX (Developer Experience) zu verbessern, hat Angular den Keyboard-Events 
 Diese Technik ist isoliert bei den Keyboard-Events eingeführt worden. Netanel Basal hat in seinem Blog mit [Implementing evenet modifiers](https://netbasal.com/implementing-event-modifiers-in-angular-87e1a07969ce) ein Beispiel geliefert, wie dieses Konzept weitergedacht werden könnte.
 
 [^1]: Link in das Docs-Archiv: [User Input](https://angular.io/guide/user-input#key-event-filtering-with-keyenter)
+
+---
+
+# Services / Dependency Injection
+
+- Was ist ein Dienst?
+- Wie erzeuge ich einen Dienst?
+- Wie nutze ich einen Dienst?
+
+---
+
+# Services: What is a service?
+
+- _Etwas_ das Funktionalität bereitstellt.
+  - Oft als Singleton implementiert
+  - Beispiele: API-Wrapper, HTTP-Wrapper, Business-Logik
+- Nicht gekoppelt an einen View bzw. eine Komponente
+
+---
+
+# Services: What is an Angular Service?
+
+Ein Service in der Angular-Welt ist meißt eine Instanz einer Klasse.
+
+```ts
+import { Injectable } from '@angular/core';
+
+@Injectable()
+export class PersistenceService {}
+```
+
+Die Dekopration als `@Injectable` ist theoretisch optional. Sie bedeutet(e), dass der eventuelle Konstruktor des Services weitere Service verlangen darf und dass der Dependency-Injection Container diese auflöst. Er bedeutet also primär nicht, dass dieser Service injezierbar in andere Klassen ist.
+
+---
+
+# Service: How do I create a service?
+
+- Ich erstelle eine Klasse ;-)
+- `ng generate service service-name`
+
+---
+
+# Service: How do I provide a service?
+
+Ein Service muss in der Angular-Welt im Dependency Injection-Container registriert werden.
+
+Best-Practice aktuell ist, dass der Service im `@Injectable`-Dekorator sich _selbst_ bereitstellt.
+
+```ts
+import { Injectable } from '@angular/core';
+
+@Injectable({
+  providedIn: 'root',
+})
+export class PersistenceService {}
+```
+
+---
+
+# Service: How did I provide services?
+
+Vor Angular 6 musste der Service im `provides`-Array eines `NgModule` oder eines `Component`-Dekorators bereitgestellt werden. Letzteres konnte benutzt werden, um mehrere Service-Instanzen in einer Anwendung vorzuhalten (pro Component-Subtree).
+
+Seit Angular 14 und den Standalone-Komponenten kann ein globaler Dienst auch beim Bootstrap der Anwendung
+im Konfigurations-Objekt registriert werden.
+
+Zu der eigentlichen Registrierung (egal ob im Komponenten-Baum oder global) gab es verschiedene Varianten: [DI Providers](https://angular.io/guide/dependency-injection-providers)
+
+Diese Techniken sollte nur noch bewusst und in Ausnahme-/Spezialfällen angewendet werden.
+
+---
+
+# Service: How do I consume a Service?
+
+Ein Service wird vom DI-Container _verlangt_ durch Konstruktor-Injektion. D.h. unser Konstruktor hat einen Parameter vom Service-Typ:
+
+```ts
+export class SomeComponentOrSomethingElse {
+  constructor(private persistenceSvc: PersistenceService) {}
+}
+```
+
+In manchen Spezialfällen braucht man am Konstruktorargument einen `@Inject`-Dekorator am Argument.
+
+# Service: How do I consume a Service?
+
+Seit Angular 14 kann der Service auch über Property-Initialisierungen injeziert werdern:
+
+```ts
+export class SomeComponentOrSomethingElse {
+  persistenceSvc = inject(PersistenceService);
+}
+```
+
+Verschiedene Artefakte (u.a. zum Beispiel `Guards`) werden im modernen Angular nicht mehr als
+Klassen implementiert - sondern als einfache Funktionen. Auch hier kommt diese Form der Injezierung
+zum Einsatz.
